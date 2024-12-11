@@ -1,7 +1,6 @@
+# Ember - Ollama-like interface for embedding models
 
-# Ember - Ollama-like interface for embedding models
-
-Ember offers ANE accelerated embedding models.
+Ember offers ANE accelerated embedding models with a convenient server!
 
 ## Getting Started
 
