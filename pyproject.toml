@@ -1,0 +1,23 @@
+[project]
+name = "ember"
+version = "0.1.0"
+description = "A fast, simple embedding server for MacOS."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "coremlprofiler>=0.4.0",
+    "coremltools>=8.1",
+    "fastapi>=0.115.5",
+    "pydantic>=2.10.3",
+    "questionary>=2.0.1",
+    "sentence-transformers>=3.3.1",
+    "torch>=2.5.1",
+    "uvicorn>=0.32.1",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+ember = "ember.cli:main"
