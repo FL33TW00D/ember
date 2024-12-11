@@ -3,8 +3,7 @@ from coremltools import ComputeUnit
 from coremltools.converters.mil._deployment_compatibility import AvailableTarget
 from coremltools.converters.mil.mil.passes.defs.quantization import ComputePrecision
 from .serve import serve
-from .generate import generate
-
+from .create import create 
 
 class bcolors:
     HEADER = "\033[95m"
@@ -22,7 +21,7 @@ def parse_args(parser: argparse.ArgumentParser) -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     generate_parser = subparsers.add_parser(
-        "generate", help="Generate CoreML model from sentence-transformers model."
+        "create", help="Create CoreML model for embeddings from a SentenceTransformer model."
     )
 
     generate_parser.add_argument(
@@ -109,8 +108,8 @@ def main():
     args = parser.parse_args()
 
     match args.command:
-        case "generate":
-            generate(
+        case "create":
+            create(
                 args.output_dir,
                 args.batch_size,
                 args.min_deployment_target,

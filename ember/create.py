@@ -144,8 +144,11 @@ def select_model() -> ModelChoice:
         ),
     ).ask()
     if selected.startswith("Custom"):
-        custom_org = questionary.text("Enter the organisation:").ask()
-        custom_model = questionary.text("Enter the model name:").ask()
+        custom_id = questionary.text("Enter the model ID (org/name, use the ⎘ button on the Hub 🤗)").ask()
+        if "/" not in custom_id:
+            raise ValueError("Invalid model ID. Please use the format org/name")
+
+        custom_org, custom_model = custom_id.split("/")
         return ModelChoice(custom_org, custom_model, "Custom Model")
     else:
         return next(choice for choice in MODEL_CHOICES if str(choice) == selected)
@@ -226,7 +229,7 @@ def coreml_precision_to_torch(precision: ComputePrecision) -> torch.dtype:
         raise ValueError(f"Unsupported precision: {precision}")
 
 
-def generate(
+def create(
     output_dir: str,
     batch_size: int,
     min_deployment_target: AvailableTarget,

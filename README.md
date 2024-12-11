@@ -8,25 +8,16 @@ Sentence transformers models generate representations (called embeddings) from d
 
 ## Getting Started
 
-Firstly, clone the repository. Then run:
+Follow the drop down menu instructions with `ember create` to get started:
 ```bash
-uv sync
-```
-
-If you don't use `uv` to configure your virtual environments, just run `pip install ./ember` after cloning.
-
-Once that's done, you should be ready to get started!
-
-Ember ships with 2 commands out of the box: `ember generate` and `ember serve`
-
-```bash
-ember generate
+ember create
 ```
 Generate displays a dropdown menu, allowing you to select one of a few popular sentence-transformers models. There's also a `Custom Model` option where you can choose your desired [sentence transformers model from Hugging Face](https://huggingface.co/models?library=sentence-transformers&sort=trending). The selected model will be automatically downloaded and converted to Core ML for you.
 
-For example, you could select [`intfloat/multilingual-e5-small`](https://huggingface.co/intfloat/multilingual-e5-small), a small but multilingual model that generates embeddings with 384 dimensions.
+You could select `intfloat/multilingual-e5-small` as the model to create for
+example.
 
-Ember will convert the model to Core ML. After that's done, you can spawn a local server using:
+You should now have a CoreML model. You can serve this on a local server using:
 
 ```bash
 ember serve
