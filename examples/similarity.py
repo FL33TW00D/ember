@@ -23,7 +23,6 @@ corpus = [
 def get_payload(documents):
     payload = {
         "model": model_id,
-        #"documents": [{"role": "user", "content": d} for d in documents],
         "documents": [{"content": d} for d in documents],
         "options": { "keep_alive": 1 }
     }
