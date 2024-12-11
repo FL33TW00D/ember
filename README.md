@@ -42,3 +42,7 @@ curl http://localhost:11434/api/embed \
 
 This example will return embeddings for the documents you supplied, which in this case are the sentences `Hello, world!` and `Open source for the win 🤗!`. The model process will stay running
 until the `keep_alive` duration is reached (1 minute in this case), so subsequent requests will be processed fast.
+
+## Examples
+
+- [similarity.py](examples/similarity.py) Simple similarity computation between a query and a set of documents.
