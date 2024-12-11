@@ -1,7 +1,7 @@
 
 # Ember - Ollama-like interface for embedding models
 
-Ember offers NPU accelerated embedding models
+Ember offers ANE accelerated embedding models.
 
 ## Getting Started
 
@@ -9,6 +9,9 @@ Follow the drop down menu instructions with `ember generate` to get started:
 ```bash
 ember generate
 ```
+
+You could select `intfloat/multilingual-e5-small` as the model to generate for
+example.
 
 You should now have a generated CoreML model. You can serve this on a local
 server using:
@@ -36,10 +39,3 @@ curl http://localhost:11434/api/embed \
 
 You should get some embeddings returned! The model process will stay running
 until the `keep_alive` duration is reached (1 minute in this case).
-
-
-## TODO
-1. Handle max_length correctly for models ✅  
-2. Change list of `sentence-transformers` models to the most popular models ✅
-3. Ensure that all popular models are ANE mostly
-4. Write up some docs!

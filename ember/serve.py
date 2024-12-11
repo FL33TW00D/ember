@@ -115,7 +115,7 @@ def model_worker(
             model_name += ".mlmodelc"
         
         try:
-            model = ct.models.CompiledMLModel(model_name)
+            model = ct.models.CompiledMLModel(model_name, compute_units=ct.ComputeUnit.CPU_ONLY)
         except Exception as e:
             raise EmbeddingError(
                 code=EmbeddingErrorCode.MODEL_LOAD_FAILED,

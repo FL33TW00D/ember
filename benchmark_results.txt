@@ -1,0 +1,77 @@
+Intfloat small CPU only bs 32
+
+Benchmark Results:
+-----------------
+total_requests: 50
+successful_requests: 50
+failed_requests: 0
+documents_per_request: 32
+total_documents_processed: 1600
+average_duration: 3.154
+median_duration: 3.270
+p95_duration: 3.395
+min_duration: 0.676
+max_duration: 3.403
+std_dev: 0.496
+total_duration: 3.403
+requests_per_second: 14.691
+documents_per_second: 470.118
+
+
+Intfloat small ANE bs 32
+Benchmark Results:
+-----------------
+total_requests: 50
+successful_requests: 50
+failed_requests: 0
+documents_per_request: 32
+total_documents_processed: 1600
+average_duration: 2.343
+median_duration: 2.380
+p95_duration: 2.388
+min_duration: 0.480
+max_duration: 2.389
+std_dev: 0.269
+total_duration: 2.389
+requests_per_second: 20.928
+documents_per_second: 669.693
+
+
+Intfloat small ANE bs 64
+Benchmark Results:
+-----------------
+total_requests: 50
+successful_requests: 50
+failed_requests: 0
+documents_per_request: 64
+total_documents_processed: 3200
+average_duration: 4.457
+median_duration: 4.568
+p95_duration: 4.572
+min_duration: 1.831
+max_duration: 4.573
+std_dev: 0.542
+total_duration: 4.573
+requests_per_second: 10.934
+documents_per_second: 699.750
+
+Intfloat small CPU bs 64
+Benchmark Results:
+-----------------
+total_requests: 50
+successful_requests: 50
+failed_requests: 0
+documents_per_request: 64
+total_documents_processed: 3200
+average_duration: 6.417
+median_duration: 6.499
+p95_duration: 6.759
+min_duration: 1.267
+max_duration: 6.819
+std_dev: 0.753
+total_duration: 6.819
+requests_per_second: 7.333
+documents_per_second: 469.299
+
+
+Conclusion: ANE ~scales with bs, CPU does not.
