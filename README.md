@@ -40,11 +40,11 @@ curl http://localhost:11434/api/embed \
   -d '{
     "model": "intfloat/multilingual-e5-small",
     "documents": [
-      { "role": "user", "content": "Hello, world!" },
-      { "role": "user", "content": "Open source for the win 🤗!" }
-    ], 
-    "options": { 
-        "keep_alive": 1 
+      { "content": "Hello, world!" },
+      { "content": "Open source for the win 🤗!" }
+    ],
+    "options": {
+      "keep_alive": 1
     }
   }'
 ```
