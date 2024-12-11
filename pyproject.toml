@@ -3,7 +3,7 @@ name = "ember"
 version = "0.1.0"
 description = "A fast, simple embedding server for MacOS."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.9,<3.13"
 dependencies = [
     "coremlprofiler>=0.4.0",
     "coremltools>=8.1",
