@@ -4,10 +4,18 @@ Ember offers ANE accelerated embedding models with a convenient server!
 
 ## Getting Started
 
-Follow the drop down menu instructions with `ember generate` to get started:
+Firstly, clone the repository. Then run:
+```bash
+uv sync
+```
+Once that's done, you should be ready to get started!
+
+Ember ships with 2 commands out of the box: `ember generate` and `ember serve`
+
 ```bash
 ember generate
 ```
+Generate creates a dropdown menu, allowing you to select 
 
 You could select `intfloat/multilingual-e5-small` as the model to generate for
 example.
