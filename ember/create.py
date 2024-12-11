@@ -1,3 +1,5 @@
+import warnings
+
 import numpy as np
 import torch
 
@@ -16,6 +18,7 @@ from sentence_transformers import SentenceTransformer
 import json
 import os
 
+warnings.filterwarnings("ignore")
 
 class bcolors:
     HEADER = "\033[95m"
