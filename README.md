@@ -1,4 +1,4 @@
-# Ember - Ollama-like interface for embedding models
+# Ember - ANE accelerated embedding models
 
 Ember offers GPU and ANE accelerated embedding models with a convenient server!
 
