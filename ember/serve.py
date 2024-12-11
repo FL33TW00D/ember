@@ -14,12 +14,15 @@ from transformers import AutoTokenizer
 import multiprocessing as mp
 import time
 from datetime import datetime, timedelta
+import os
 import queue
 import threading
 import logging
 
 PROCESS_LIFETIME_MINUTES = 5
 QUEUE_TIMEOUT = 20
+
+os.environ["TRANSFORMERS_VERBOSITY"] = "error"
 
 class EmbeddingErrorCode(str, Enum):
     BATCH_SIZE_EXCEEDED = "BATCH_SIZE_EXCEEDED"
